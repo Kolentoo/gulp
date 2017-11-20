@@ -1,3 +1,5 @@
 function hello(){
-    console.log('aaaaaaaaaaa1111');
+    console.log('hello');
+    console.log(111)
 }
+hello();
