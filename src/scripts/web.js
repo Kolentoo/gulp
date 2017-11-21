@@ -70,33 +70,9 @@ $(function(){
         });
     }
 
-    if($('.dfth-art').get(0)){
-        $('.slides-photo').slidesjs({
-            width: 990,
-            height: 430,
-            play: {
-                auto: true,
-                interval: 4000,
-                swap: true
-            },
-            callback: {
-                loaded: function(number) {
-                    $('.slides-photo').find('.slidesjs-navigation').text('');
-                    $('.slides-photo').find('.slidesjs-previous').append('<img class="slides-arrwo vm" src="images/arrow-left1.png" alt="">');
-                    $('.slides-photo').find('.slidesjs-next').append('<img class="slides-arrwo vm" src="images/arrow-right3.png" alt="">');
-                },
-                start: function(number) {
-                    $('.slides-photo').find('.slidesjs-slide').eq(number-1).find('img').lazyload({effect: "fadeIn"});
-                },
-                compvare: function(number) {
-                }
-            }
-        });
-    }
-
     if($('.swiper-enviroment').get(0)){
         var prependNumber = 1;
-        var swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-enviro', {
             pagination: '.swiper-pagination',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
@@ -139,32 +115,90 @@ $(function(){
     indexAm();
     scrollAm();
     newsPage();
+    popClose();
+    lessonPop();
+    photoPro();
+    
 });
+
+// 全局遮罩层显示
+function maskon(){
+    $('body').append(
+        '<div class="common-mask"></div>'
+    );
+    setTimeout(function() {
+        $('.common-mask').addClass('mask-on');
+    }, 200);
+}
+
+// 美术教育轮播图1
+function photoPro(){
+    if($('.photo-box').get(0)){
+        var swiper = new Swiper('.swiper-photo', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+	        slidesPerView: 3,
+	        paginationClickable: true,
+	        spaceBetween: 50,
+            slidesPerView: 'auto',
+	        centeredSlides: true,
+            loop: true,
+            autoplay: 4000
+        });
+    }
+}
+
+// 全局遮罩层消失
+function maskoff(){
+    $('.common-mask').removeClass('mask-on');
+}
+
+// 弹窗关闭
+function popClose(){
+    $('.pop-close').on('click',function(){
+        $('.lesson-pop').addClass('hide');
+        maskoff();
+    });
+}
+
+// 美术教育弹窗
+function lessonPop(){
+    $('.lesson-list').on('click',function(){
+        $('.lesson-pop').removeClass('hide');
+        setTimeout(function() {
+            $('.lesson-pop').find('img').lazyload({effect: "fadeIn"});
+        }, 100);
+        maskon();
+    });
+}
 
 // 全局tab切换
 function webTab(){
     $('.hd-list').on('click',function(){
-        $(this).addClass('aaaaa')
         var o = $(this);
         var oindex = o.index();
         var os = o.siblings();
         os.removeClass('on');
         o.addClass('on');
-        var item1 = $('.bd').find('.item').eq(oindex);
+        var item1 = o.parent().parent().find('.item').eq(oindex);
         var item2 = item1.siblings();
         item2.addClass('hide');
         item1.removeClass('hide');
-        setTimeout(function() {
-            $('.main-lesson').find('h3').addClass('h3-on');
-            $('.main-lesson').find('.p1').addClass('p1-on');
-            $('.main-lesson').find('.des-btn').addClass('des-btn-in');
-            $('.lesson-box').find('.main-pic').addClass('main-pic-on');
-            $('.lesson-list').find('.other-pic').addClass('other-pic-on');
-            $('.lesson-list').find('.lesson-title').addClass('lesson-title-on');
-            $('.lesson-list').find('.lesson-des').addClass('lesson-des-on');
-            $('.lesson-list').find('.lesson-btn').addClass('lesson-btn-on');
-            item1.find('img').lazyload({effect: "fadeIn"});
-        }, 1);
+        $('.bd').find('img').lazyload({effect: "fadeIn"});
+        photoPro();
+        if($('.dfth-index').get(0)){
+            setTimeout(function() {
+                $('.main-lesson').find('h3').addClass('h3-on');
+                $('.main-lesson').find('.p1').addClass('p1-on');
+                $('.main-lesson').find('.des-btn').addClass('des-btn-in');
+                $('.lesson-box').find('.main-pic').addClass('main-pic-on');
+                $('.lesson-list').find('.other-pic').addClass('other-pic-on');
+                $('.lesson-list').find('.lesson-title').addClass('lesson-title-on');
+                $('.lesson-list').find('.lesson-des').addClass('lesson-des-on');
+                $('.lesson-list').find('.lesson-btn').addClass('lesson-btn-on');
+                item1.find('img').lazyload({effect: "fadeIn"});
+            }, 1);
+        }
     });
 }
 
@@ -441,12 +475,12 @@ function phoneCheck(a) {
     var regPhone = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/; 
     if (!$(a).val()) {
         $(a).parents('.infor-item').addClass('infor-wrong');
-        $(a).parents('.infor-item').find('.hint').text('手机号不能为空');
+        $(a).parents('.infor-item').find('.hint').find('.p1').text('手机号不能为空');
         $('.refer').removeClass('refer-on');
         return false;
     } else if (!regPhone.test($(a).val())) {
         $(a).parents('.infor-item').addClass('infor-wrong');
-        $(a).parents('.infor-item').find('.hint').text('手机号错误');
+        $(a).parents('.infor-item').find('.hint').find('.p1').text('手机号格式错误');
         $('.refer').removeClass('refer-on');
         return false;
     } else {
@@ -464,12 +498,12 @@ function nameCheck(b) {
             return true;
         } else {
             $(b).parent('.infor-item').addClass('infor-wrong');
-            $(b).parent('.infor-item').find('.hint').text('姓名错误');
+            $(b).parent('.infor-item').find('.hint').find('.p1').text('姓名格式错误');
             return false;
         }
     } else {
         $(b).parent('.infor-item').addClass('infor-wrong');
-        $(b).parent('.infor-item').find('.hint').text('姓名不能为空');    
+        $(b).parent('.infor-item').find('.hint').find('.p1').text('姓名不能为空');    
         return false;
     }
 }
@@ -516,45 +550,45 @@ function listenTest() {
         if (nameCheck(uname) == false) {
             $('.refer').removeClass('refer-on');
             uname.parent('.infor-item').addClass('infor-wrong');
-            uname.parent('.infor-item').find('.hint').text('姓名格式错误');
+            uname.parent('.infor-item').find('.hint').find('.p1').text('姓名格式错误');
             return false;
         }else if(nameCheck(uname) == true){
             if(uphone.val()){
                 if(phoneCheck(uphone) == false){
                     $('.refer').removeClass('refer-on');
                     uphone.parent('.infor-item').addClass('infor-wrong');
-                    uphone.parent('.infor-item').find('.hint').text('手机号格式错误');
+                    uphone.parent('.infor-item').find('.hint').find('.p1').text('手机号格式错误');
                     return false;
                 }else if(phoneCheck(uphone) == true){
                     if(ucode.val()){
-                        if(uplace.val()){
+                        if($(".province option:selected").text()=='上课区域 省/市'||$(".city option:selected").text()=='上课区域 市/区'){
+                            uplace.parent('.infor-item').find('.hint').find('.p1').text('上课区域不能为空');
+                            $('.refer').removeClass('refer-on');
+                            uplace.parents('.infor-item').addClass('infor-wrong');
+                            return false;
+                        }else{
                             $('.refer').addClass('refer-on');
                             uplace.parent('.infor-item').removeClass('infor-wrong');
                             return true;
-                        }else{
-                            $('.refer').removeClass('refer-on');
-                            uplace.parent('.infor-item').addClass('infor-wrong');
-                            uplace.parent('.infor-item').find('.hint').text('上课区域不能为空');
-                            return false;
                         }
                     }else{
                         $('.refer').removeClass('refer-on');
                         ucode.parent('.infor-item').addClass('infor-wrong');
-                        ucode.parent('.infor-item').find('.hint').text('验证码不能为空');
+                        ucode.parent('.infor-item').find('.hint').find('.p1').text('验证码不能为空');
                         return false;
                     }
                 }
             }else{
                 $('.refer').removeClass('refer-on');
                 uphone.parent('.infor-item').addClass('infor-wrong');
-                uphone.parent('.infor-item').find('.hint').text('手机号不能为空');
+                uphone.parent('.infor-item').find('.hint').find('.p1').text('手机号不能为空');
                 return false;
             }
         }
     }else{
         $('.refer').removeClass('refer-on');
         uname.parent('.infor-item').addClass('infor-wrong');
-        uname.parent('.infor-item').find('.hint').text('姓名不能为空');
+        uname.parent('.infor-item').find('.hint').find('.p1').text('姓名不能为空');
         return false;
     }
 }
@@ -562,7 +596,11 @@ function listenTest() {
 // 视听申请唤醒
 function listenWakeup() {
     var listenInput = $('.listen-box').find('input');
+    var listenSelect = $('.listen-box').find('select');
     listenInput.on('input propertychange', function() {
+        listenTest();
+    });
+    listenSelect.on('change',function(){
         listenTest();
     });
 }

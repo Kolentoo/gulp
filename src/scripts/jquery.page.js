@@ -16,10 +16,10 @@
 				obj.empty();
 				//上一页
 				if(args.current > 1){
-					obj.append('<a href="javascript:;" class="prevPage">上一页</a>');
+					obj.append('<a href="javascript:;" class="prevPage"><img class="new-arrow vm" src="../images/new-arrow1.png" alt=""></a>');
 				}else{
 					obj.remove('.prevPage');
-					obj.append('<span class="disabled">上一页</span>');
+					obj.append('<span class="disabled"><img class="new-arrow vm" src="../images/new-arrow1.png" alt=""></span>');
 				}
 				//中间页码
 				if(args.current != 1 && args.current >= 4 && args.pageCount != 4){
@@ -52,10 +52,10 @@
 				}
 				//下一页
 				if(args.current < args.pageCount){
-					obj.append('<a href="javascript:;" class="nextPage">下一页</a>');
+					obj.append('<a href="javascript:;" class="nextPage"><img class="new-arrow vm" src="../images/new-arrow2.png" alt=""></a>');
 				}else{
 					obj.remove('.nextPage');
-					obj.append('<span class="disabled">下一页</span>');
+					obj.append('<span class="disabled"><img class="new-arrow vm" src="../images/new-arrow2.png" alt=""></span>');
 				}
 			})();
 		},

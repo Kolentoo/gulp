@@ -53,14 +53,14 @@ gulp.task('auto', function () {
     // 监听文件修改，当文件被修改则执行 script 任务
     gulp.watch('src/scripts/*.js', ['jscompress']);
     gulp.watch('src/styles/*.css', ['csscompress']);
-    gulp.watch('src/images/*.*', ['image'])
+    gulp.watch('src/images/*.*', ['image']);
+    gulp.watch('src/*.html', ['reload']);
 });
 
 // 创建热加载任务
 gulp.task('reload',function(){
     gulp.src('src/*')
         .pipe(connect.reload())
-        console.log('html change')
 })
 
 // gulp服务器
