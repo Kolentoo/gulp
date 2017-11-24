@@ -156,18 +156,18 @@ function maskoff(){
 // 弹窗关闭
 function popClose(){
     $('.pop-close').on('click',function(){
-        $('.lesson-pop').addClass('hide');
+        $('.pop-group').find('.pop-con').addClass('hide');
         maskoff();
     });
 }
 
 // 美术教育弹窗
 function lessonPop(){
-    $('.lesson-list').on('click',function(){
-        $('.lesson-pop').removeClass('hide');
-        setTimeout(function() {
-            $('.lesson-pop').find('img').lazyload({effect: "fadeIn"});
-        }, 100);
+    $('.lc1').find('.lesson-list').on('click',function(){
+        var o = $(this);
+        var oindex = o.index();
+        $('.pg1').children('.pop-con').eq(oindex).removeClass('hide');
+        $('.pg1').children('.pop-con').find('img').lazyload({effect: "fadeIn"});
         maskon();
     });
 }
