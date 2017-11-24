@@ -70,21 +70,21 @@ $(function(){
         });
     }
 
-    if($('.swiper-enviroment').get(0)){
-        var prependNumber = 1;
-        var swiper = new Swiper('.swiper-enviro', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            slidesPerView: 5,	
-            centeredSlides: true,
-            paginationClickable: true,
-            spaceBetween: 25,
-            loop: true,
-            freeMode: true,
-            autoplay: 4000
-        });
-    }
+    // if($('.swiper-enviroment').get(0)){
+    //     var prependNumber = 1;
+    //     var swiper = new Swiper('.swiper-enviro', {
+    //         pagination: '.swiper-pagination',
+    //         nextButton: '.swiper-button-next',
+    //         prevButton: '.swiper-button-prev',
+    //         slidesPerView: 5,	
+    //         centeredSlides: true,
+    //         paginationClickable: true,
+    //         spaceBetween: 25,
+    //         loop: true,
+    //         freeMode: true,
+    //         autoplay: 4000
+    //     });
+    // }
 
     $('.back').on('click',function(){
         $('body,html').animate({scrollTop:0},1000);
@@ -117,9 +117,27 @@ $(function(){
     newsPage();
     popClose();
     lessonPop();
-    photoPro();
+    // photoPro();
+    tiny();
+
+if($('.swiper-container').get(0)){
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        paginationClickable: true,
+        slidesPerView: 3,
+        loop: true
+    })
+}
     
 });
+function tiny(){
+    $(".photo-box").tinycarousel({
+        axis: 'x',
+        infinite: false,
+        bullets: true,
+        buttons: true
+    });
+}
 
 // 全局遮罩层显示
 function maskon(){
@@ -151,12 +169,13 @@ function photoPro(){
 // 全局遮罩层消失
 function maskoff(){
     $('.common-mask').removeClass('mask-on');
+    $('.common-mask').remove();
 }
 
 // 弹窗关闭
 function popClose(){
     $('.pop-close').on('click',function(){
-        $('.pop-group').find('.pop-con').addClass('hide');
+        $('.pop-group').find('.pop-inner').addClass('hide');
         maskoff();
     });
 }
@@ -166,8 +185,16 @@ function lessonPop(){
     $('.lc1').find('.lesson-list').on('click',function(){
         var o = $(this);
         var oindex = o.index();
-        $('.pg1').children('.pop-con').eq(oindex).removeClass('hide');
-        $('.pg1').children('.pop-con').find('img').lazyload({effect: "fadeIn"});
+        $('.pg1').children('.pop-inner').eq(oindex).removeClass('hide');
+        $('.pg1').children('.pop-inner').find('img').lazyload({effect: "fadeIn"});
+        maskon();
+    });
+
+    $('.lc2').find('.lesson-list').on('click',function(){
+        var o = $(this);
+        var oindex = o.index();
+        $('.pg2').children('.pop-inner').eq(oindex).removeClass('hide');
+        $('.pg2').children('.pop-inner').find('img').lazyload({effect: "fadeIn"});
         maskon();
     });
 }
@@ -544,8 +571,6 @@ function listenTest() {
     var uphone = $('.uphone');
     var ucode = $('.ucode');
     var uplace = $('.uplace');
-    nameCheck(uname);
-    phoneCheck(uphone);
     if (uname.val()) {
         if (nameCheck(uname) == false) {
             $('.refer').removeClass('refer-on');
@@ -605,6 +630,7 @@ function listenWakeup() {
     });
 }
 
+// 分页插件
 function newsPage(){
     if($('.dfth-news').get(0)){
         $(".tcdPageCode").createPage({
