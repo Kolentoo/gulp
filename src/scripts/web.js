@@ -70,22 +70,6 @@ $(function(){
         });
     }
 
-    // if($('.swiper-enviroment').get(0)){
-    //     var prependNumber = 1;
-    //     var swiper = new Swiper('.swiper-enviro', {
-    //         pagination: '.swiper-pagination',
-    //         nextButton: '.swiper-button-next',
-    //         prevButton: '.swiper-button-prev',
-    //         slidesPerView: 5,	
-    //         centeredSlides: true,
-    //         paginationClickable: true,
-    //         spaceBetween: 25,
-    //         loop: true,
-    //         freeMode: true,
-    //         autoplay: 4000
-    //     });
-    // }
-
     $('.back').on('click',function(){
         $('body,html').animate({scrollTop:0},1000);
     });
@@ -117,27 +101,31 @@ $(function(){
     newsPage();
     popClose();
     lessonPop();
-    // photoPro();
-    tiny();
+    photoPro();
+    enviroment();
 
-if($('.swiper-container').get(0)){
-    var mySwiper = new Swiper('.swiper-container',{
-        pagination: '.pagination',
-        paginationClickable: true,
-        slidesPerView: 3,
-        loop: true
-    })
-}
     
 });
-function tiny(){
-    $(".photo-box").tinycarousel({
-        axis: 'x',
-        infinite: false,
-        bullets: true,
-        buttons: true
-    });
+//校区环境轮播图
+function enviroment(){
+    if($('.swiper-enviro').get(0)){
+        var mySwiper = new Swiper('.swiper-enviro',{
+            pagination: '.pagination',
+            paginationClickable: true,
+            slidesPerView: 4.97,
+            loop: true
+        });
+        $('.arrow-left').on('click', function(e){
+            e.preventDefault()
+            mySwiper.swipePrev()
+        });
+        $('.arrow-right').on('click', function(e){
+            e.preventDefault()
+            mySwiper.swipeNext()
+        });
+    }
 }
+
 
 // 全局遮罩层显示
 function maskon(){
@@ -149,19 +137,21 @@ function maskon(){
     }, 200);
 }
 
-// 美术教育轮播图1
+// 美术教育照片轮播图
 function photoPro(){
-    if($('.photo-box').get(0)){
-        var swiper = new Swiper('.swiper-photo', {
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-	        slidesPerView: 3,
-	        paginationClickable: true,
-	        spaceBetween: 50,
-            slidesPerView: 'auto',
-	        centeredSlides: true,
-            loop: true,
-            autoplay: 4000
+    if($('.swiper-photo').get(0)){
+        var mySwiper = new Swiper('.swiper-photo',{
+            paginationClickable: true,
+            slidesPerView: 3,
+            loop: true
+        });
+        $('.arrow-left').on('click', function(e){
+            e.preventDefault()
+            mySwiper.swipePrev()
+        });
+        $('.arrow-right').on('click', function(e){
+            e.preventDefault()
+            mySwiper.swipeNext()
         });
     }
 }
