@@ -109,19 +109,19 @@ $(function(){
 //校区环境轮播图
 function enviroment(){
     if($('.swiper-enviro').get(0)){
-        var mySwiper = new Swiper('.swiper-enviro',{
+        var swiperEnviro = new Swiper('.swiper-enviro',{
             pagination: '.pagination',
             paginationClickable: true,
             slidesPerView: 4.97,
             loop: true
         });
-        $('.arrow-left').on('click', function(e){
-            e.preventDefault()
-            mySwiper.swipePrev()
+        $('.arrow3').on('click', function(e){
+            e.preventDefault();
+            swiperEnviro.swipePrev();
         });
-        $('.arrow-right').on('click', function(e){
-            e.preventDefault()
-            mySwiper.swipeNext()
+        $('.arrow4').on('click', function(e){
+            e.preventDefault();
+            swiperEnviro.swipeNext();
         });
     }
 }
@@ -140,18 +140,20 @@ function maskon(){
 // 美术教育照片轮播图
 function photoPro(){
     if($('.swiper-photo').get(0)){
-        var mySwiper = new Swiper('.swiper-photo',{
-            paginationClickable: true,
-            slidesPerView: 3,
-            loop: true
-        });
-        $('.arrow-left').on('click', function(e){
-            e.preventDefault()
-            mySwiper.swipePrev()
-        });
-        $('.arrow-right').on('click', function(e){
-            e.preventDefault()
-            mySwiper.swipeNext()
+        $(".swiper-photo").each(function(x,y){
+            var sw =$(y).swiper({
+                paginationClickable: true,
+                slidesPerView: 3,
+                loop: true
+            });
+            $('.arrow1').on('click', function(e){
+                e.preventDefault();
+                sw.swipePrev();
+            });
+            $('.arrow2').on('click', function(e){
+                e.preventDefault();
+                sw.swipeNext();
+            });
         });
     }
 }
@@ -202,7 +204,6 @@ function webTab(){
         item2.addClass('hide');
         item1.removeClass('hide');
         $('.bd').find('img').lazyload({effect: "fadeIn"});
-        photoPro();
         if($('.dfth-index').get(0)){
             setTimeout(function() {
                 $('.main-lesson').find('h3').addClass('h3-on');
