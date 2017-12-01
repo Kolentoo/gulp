@@ -103,6 +103,7 @@ $(function(){
     lessonPop();
     photoPro();
     enviroment();
+    commonNav();
 
     
 });
@@ -112,7 +113,7 @@ function enviroment(){
         var swiperEnviro = new Swiper('.swiper-enviro',{
             pagination: '.pagination',
             paginationClickable: true,
-            slidesPerView: 4.97,
+            slidesPerView: 5,
             loop: true
         });
         $('.arrow3').on('click', function(e){
@@ -125,7 +126,6 @@ function enviroment(){
         });
     }
 }
-
 
 // 全局遮罩层显示
 function maskon(){
@@ -251,9 +251,9 @@ function commonBottom(){
                     '<div class="bottom-menu clearfix fl">'+
                         '<ul class="menu-con fl">'+
                             '<li class="menu-list first"><a href="">美术教育</a></li>'+
-                            '<li class="menu-list"><a href="">主修课程</a></li>'+
-                            '<li class="menu-list"><a href="">辅修课程</a></li>'+
-                            '<li class="menu-list"><a href="">辅修课程</a></li>'+
+                            '<li class="menu-list"><a href="">课程体系</a></li>'+
+                            '<li class="menu-list"><a href="">熊猫到家</a></li>'+
+                            '<li class="menu-list"><a href="">校区环境</a></li>'+
                             '<li class="menu-list"><a href="">师资查询</a></li>'+
                         '</ul>'+
                         '<ul class="menu-con fl">'+
@@ -281,12 +281,64 @@ function commonBottom(){
             '<div class="bottom-other clearfix">'+
                 '<p class="p1 fl">办学许可证：教民3101037020118号 沪ICP备08111589号<em>版权所有 上海凌尓艺文化传播有限公司</em></p>'+
                 '<div class="share fr">'+
-                    '<a href=""><img class="share-icon vm" src="images/wechat.png" alt=""></a>'+
+                    '<a class="wechat-box">'+
+                        '<img class="share-icon vm" src="images/wechat.png" alt="">'+
+                        '<img class="share-icon2 vm hide" src="images/wechatcode.png" alt="">'+
+                    '</a>'+
                     '<i>|</i>'+
-                    '<a href=""><img class="share-icon vm" src="images/weibo.png" alt=""></a>'+
+                    '<a href="https://weibo.com/512398902?sudaref=www.baidu.com&display=0&retcode=6102&sudaref=passport.weibo.com"><img class="share-icon vm weibo-icon" src="images/weibo.png" alt=""></a>'+
                 '</div>'+
             '</div>'
         );
+
+        $('.wechat-box').on('mouseenter',function(){
+            $('.wechat-box').find('.share-icon').attr('src','images/wechat2.png');
+            $('.share-icon2').removeClass('hide');
+        });
+        $('.wechat-box').on('mouseleave',function(){
+            $('.wechat-box').find('.share-icon').attr('src','images/wechat.png');
+            $('.share-icon2').addClass('hide');
+        });
+
+        $('.weibo-icon').on('mouseenter',function(){
+            $('.weibo-icon').attr('src','images/weibo2.png');
+        });
+        $('.weibo-icon').on('mouseleave',function(){
+            $('.weibo-icon').attr('src','images/weibo.png');
+        });
+    }
+}
+
+// 全局置顶导航
+function commonNav(){
+    if($('.nav-body').get(0)){
+        $('.nav-body').append(
+            '<div class="navigation common">'+
+                '<div class="menu-box clearfix">'+
+                    '<a href="" class="logo block fl"><img class="vm g10" src="images/logo.png" alt=""></a>'+
+                    '<ul class="menu-con clearfix">'+
+                        '<li class="menu-list fl"><a href="">首页</a></li>'+
+                        '<li class="menu-list fl"><a href="">美术教育</a></li>'+
+                        '<li class="menu-list fl"><a href="">授权合作</a></li>'+
+                        '<li class="menu-list fl"><a href="">创艺产品</a></li>'+
+                        '<li class="menu-list fl"><a href="">在线画廊</a></li>'+
+                        '<li class="menu-list fl"><a href="">品牌故事</a></li>'+
+                        '<li class="menu-list fl"><a href="">加入我们</a></li>'+
+                        '<li class="menu-list fl"><a href="">校区查询</a></li>'+
+                        '<li class="menu-list fl"><a href="">学员中心</a></li>'+
+                    '</ul>'+
+                '</div>'+
+            '</div>'
+        );
+
+        $(window).scroll( function() {
+            var w = $(window).scrollTop();
+            if (w >= 150) {
+                    $(".navigation").addClass('nav-on navigation-on');
+                } else {
+                    $(".navigation").removeClass('nav-on navigation-on');
+                }
+        }).trigger("scroll");
     }
 }
 
@@ -633,3 +685,5 @@ function newsPage(){
         });
     }
 }
+
+
