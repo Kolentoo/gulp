@@ -107,7 +107,8 @@ $(function(){
     proPhoto();
     swiperArrow();
     videoPop();
-    
+    certificate();
+    toggleTab();
 });
 //校区环境轮播图
 function enviroment(){
@@ -688,7 +689,7 @@ function listenTest() {
                     return false;
                 }else if(phoneCheck(uphone) == true){
                     if(ucode.val()){
-                        if($(".province option:selected").text()=='上课区域 省/市'||$(".city option:selected").text()=='上课区域 市/区'){
+                        if($(".province option:selected").text()=='上课区域 省/市'||$(".city option:selected").text()=='上课区域 市/区'||$(".city option:selected").text()=='工作区域 市/区'||$(".city option:selected").text()=='工作区域 市/区'){
                             uplace.parent('.infor-item').find('.hint').find('.p1').text('上课区域不能为空');
                             $('.refer').removeClass('refer-on');
                             uplace.parents('.infor-item').addClass('infor-wrong');
@@ -764,4 +765,35 @@ function videoPop(){
     });
 }
 
+// 查看证书
+function certificate(){
+    $('.check-btn').on('click',function(){
+        $('.pop-box').removeClass('hide');
+        maskon();
+    });
+    $('.pop-close').on('click',function(){
+        $('.pop-box').addClass('hide');
+        maskoff();
+    })
+}
+
+
+// 加入我们
+function toggleTab(){
+    $('.job-title').on('click',function(){
+        $(this).toggleClass('job-on');
+        $(this).parent().children('.job-con').toggleClass('hide');
+    });
+
+    $('.apply-btn').on('click',function(){
+        $('.pop-job').removeClass('hide');
+        maskon();
+    });
+
+    $('.pop-close').on('click',function(){
+        $('.pop-job').addClass('hide');
+        $('.result').addClass('hide');
+        maskoff();
+    });
+}
 
