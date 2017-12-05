@@ -104,7 +104,9 @@ $(function(){
     photoPro();
     enviroment();
     commonNav();
-
+    proPhoto();
+    swiperArrow();
+    videoPop();
     
 });
 //校区环境轮播图
@@ -127,16 +129,6 @@ function enviroment(){
     }
 }
 
-// 全局遮罩层显示
-function maskon(){
-    $('body').append(
-        '<div class="common-mask"></div>'
-    );
-    setTimeout(function() {
-        $('.common-mask').addClass('mask-on');
-    }, 200);
-}
-
 // 美术教育照片轮播图
 function photoPro(){
     if($('.swiper-photo').get(0)){
@@ -156,6 +148,68 @@ function photoPro(){
             });
         });
     }
+}
+
+// 创艺产品轮播图
+function proPhoto(){
+    if($('.slides-pro').get(0)){
+        $('.slides-pro').slidesjs({
+            width: 926,
+            height: 386,
+            play: {
+                auto: true,
+                interval: 40000,
+                swap: true
+            },
+            callback: {
+                loaded: function(number) {
+                    $('.slides-pro').find('.slidesjs-navigation').text('');
+                    $('.slidesjs-pagination-item').children('a').text('');
+                    $('.slides-pro').find('.slidesjs-previous').append(
+                        '<div class="arrow-left swiper-arrow swiper-left">'+
+                            '<img class="vm arrow-left" src="images/arrow-left4.png" alt="">'+
+                        '</div>' 
+                    );
+                    $('.slides-pro').find('.slidesjs-next').append(
+                        '<div class="arrow-right swiper-arrow swiper-right">'+
+                            '<img class="vm arrow-right" src="images/arrow-right6.png" alt="">'+
+                        '</div>' 
+                    );
+                },
+                start: function(number) {
+                    $('.slidesjs-slide').eq(number-1).find('img').lazyload({effect: "fadeIn"});
+                },
+                compvare: function(number) {
+                }
+            }
+        });
+    }
+}
+
+// swiper箭头交互
+function swiperArrow(){
+    $('.swiper-left').on('mouseenter',function(){
+        $(this).children('img').attr('src','images/arrow-left2.png');
+    });
+    $('.swiper-left').on('mouseleave',function(){
+        $(this).children('img').attr('src','images/arrow-left4.png');
+    });
+    $('.swiper-right').on('mouseenter',function(){
+        $(this).children('img').attr('src','images/arrow-right4.png');
+    });
+    $('.swiper-right').on('mouseleave',function(){
+        $(this).children('img').attr('src','images/arrow-right6.png');
+    });
+}
+
+// 全局遮罩层显示
+function maskon(){
+    $('body').append(
+        '<div class="common-mask"></div>'
+    );
+    setTimeout(function() {
+        $('.common-mask').addClass('mask-on');
+    }, 200);
 }
 
 // 全局遮罩层消失
@@ -203,7 +257,12 @@ function webTab(){
         var item2 = item1.siblings();
         item2.addClass('hide');
         item1.removeClass('hide');
-        $('.bd').find('img').lazyload({effect: "fadeIn"});
+        setTimeout(function() {
+            $('.item').eq(oindex).find("img.lazy").lazyload({
+                effect: "fadeIn" 
+            });
+        }, 1);
+
         if($('.dfth-index').get(0)){
             setTimeout(function() {
                 $('.main-lesson').find('h3').addClass('h3-on');
@@ -684,6 +743,25 @@ function newsPage(){
             }
         });
     }
+}
+
+// 视频弹窗
+function videoPop(){
+    $('.video-box').on('click',function(){
+        var oindex = $(this).parents('.item').index();
+        var vp = $('.video-pop').children('li').eq(oindex);
+        var vps = vp.siblings();
+        vps.addClass('hide');
+        vp.removeClass('hide');
+        $('.video-pop').removeClass('hide');
+        maskon();
+    });
+
+    $('.pop-close').on('click',function(){
+        $(this).parent('li').addClass('hide');
+        $('.video-pop').addClass('hide');
+        maskoff();
+    });
 }
 
 
