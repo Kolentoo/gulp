@@ -109,6 +109,7 @@ $(function(){
     videoPop();
     certificate();
     toggleTab();
+    aboutTab();
 });
 //校区环境轮播图
 function enviroment(){
@@ -277,6 +278,21 @@ function webTab(){
                 item1.find('img').lazyload({effect: "fadeIn"});
             }, 1);
         }
+    });
+}
+
+// 关于我们切换
+function aboutTab(){
+    $('.hd-list').on('click',function(){
+        var o = $(this);
+        var oindex = o.index();
+        var os = o.siblings();
+        os.removeClass('on');
+        o.addClass('on');
+        var item1 = $('.item').eq(oindex);
+        var item2 = item1.siblings();
+        item2.addClass('hide');
+        item1.removeClass('hide');
     });
 }
 

@@ -688,4 +688,65 @@ z-index:999;}
 .pop-result .result .p2 {font-size: 14px;color:#999;}
 
 
+/* 关于我们 */
+.dfth-aboutus .banner {background: url(../images/aboutus-banner.jpg) no-repeat center center;height:560px;color:#fff;text-align: center;
+position: relative;}
+.dfth-aboutus .banner h2{font-size: 40px;padding: 220px 0 5px 0;}
+.dfth-aboutus .banner .p1 {font-size: 30px;}
+.dfth-aboutus .banner .hd-box {height: 50px;position: absolute;left: 0;bottom: 0;width: 100%;background: rgba(0,0,0,0.5);}
+.dfth-aboutus .banner .hd {width: 930px;margin:0 auto;}
+.dfth-aboutus .banner .hd-list {line-height: 50px;font-size: 16px;margin:0 38px;cursor: pointer;width: 110px;text-align: center;transition:all ease 0.5s;}
+.dfth-aboutus .banner .hd-list .p2 {width: 100%;}
+.dfth-aboutus .banner .hd-list:hover {background: #ff8c1b;}
+.dfth-aboutus .banner .on {background: #ff8c1b;}
+.dfth-aboutus .bd {padding:80px 0;}
+.dfth-aboutus .bd .item1 {width: 1105px;margin:0 auto;}
+.dfth-aboutus .bd .item2 {width: 750px;margin:0 auto;}
+.dfth-aboutus .bd .item4 {padding-bottom: 40px;}
+.dfth-aboutus .item .story {margin:70px 0 0 60px;}
+.dfth-aboutus .item h2{font-size: 30px;}
+.dfth-aboutus .item .p1 {font-size: 28px;color:#999;margin-top: 50px;}
+.dfth-aboutus .item .company-txt {margin-top: 40px;}
+.dfth-aboutus .item .company-txt dd{margin-bottom: 15px;font-size: 16px;}
+.dfth-aboutus .item .company-pic1 {text-align: center;width: 1105px;margin-top: 60px;}
+.dfth-aboutus .item .year i{color:#333;font-size: 20px;}
+.dfth-aboutus .item .shape {height: 20px;width: 1px;background: #e6e6e6;margin-left: 23px;}
+.dfth-aboutus .cricle {width: 6px;height: 6px;background: #fff;border:4px solid #ffc185;border-radius:50%;margin:4px 0 4px 17px;}
+.dfth-aboutus .txt {font-size: 16px;color:#333;margin-left: 110px;}
+.dfth-aboutus .cultrue-txt {font-size: 14px;color:#666;margin-top: 45px;}
+.dfth-aboutus .cultrue-txt .s1 {margin:0 20px;}
+.dfth-aboutus .cultrue-txt i{color:#ff8000;margin-right: 15px;}
+.dfth-aboutus .company-info {width: 1202px;margin:60px auto 0;padding-bottom: 80px;border-bottom: 1px solid #e6e6e6;}
+.dfth-aboutus .company-info .info-list {width: 400px;text-align: center;}
+.dfth-aboutus .info-list .p3 {font-size: 32px;color:#ff8c1b;}
+.dfth-aboutus .info-list .p3 i{font-size: 56px;line-height: 56px;}
+.dfth-aboutus .info-list .p2 {font-size: 20px;}
+.dfth-aboutus .middle {border-left:1px solid #e6e6e6;border-right:1px solid #e6e6e6;}
+.dfth-aboutus .map-pic {width: 1036px;margin:100px auto 0;}
+.dfth-aboutus .teach-group {width: 1100px;margin:70px auto 0;}
+.dfth-aboutus .list-con {padding: 40px;}
+.dfth-aboutus .list-title {padding: 40px 50px 60px 0;border-right: 1px solid #e6e6e6;}
+.dfth-aboutus .line {color:#ff8c1b;font-size: 36px;line-height: 36px;}
+.dfth-aboutus .teach-list {width: 1100px;height: 246px;border:1px solid #e6e6e6;border-radius:5px;margin-bottom: 40px;}
+.dfth-aboutus .teach-list1 {background: url(../images/aboutus-bj1.jpg) no-repeat center center;}
+.dfth-aboutus .teach-list2 {background: url(../images/aboutus-bj2.jpg) no-repeat center center;}
+.dfth-aboutus .teach-list3 {background: url(../images/aboutus-bj3.jpg) no-repeat center center;}
+.dfth-aboutus .teach-list4 {background: url(../images/aboutus-bj4.jpg) no-repeat center center;}
+.dfth-aboutus .teach-txt1 {font-size: 24px;}
+.dfth-aboutus .list-txt {color:#333;font-size: 16px;width: 500px;margin-left: 40px;line-height:30px;}
+.dfth-aboutus .teach-list1 .list-txt {margin-top: 34px;}
+.dfth-aboutus .teach-list2 .list-txt {margin-top: 50px;}
+.dfth-aboutus .teach-list3 .list-txt {margin-top: 65px;}
+.dfth-aboutus .teach-list4 .list-txt {margin-top: 50px;}
+.dfth-aboutus .expert-box {width: 1100px;margin:130px auto 0;}
+.dfth-aboutus .expert-list {padding-bottom: 80px;margin-bottom: 80px;border-bottom: 1px solid #e6e6e6;}
+.dfth-aboutus .expert-last {border-bottom: none;margin-bottom: 0;}
+.dfth-aboutus .expert-pic {width: 500px;}
+.dfth-aboutus .expert-txt {width: 380px;margin:50px 160px 0 0;}
+.dfth-aboutus .expert-txt .name {color:#ff8c1b;font-size: 28px;margin-bottom: 15px;}
+.dfth-aboutus .expert-txt dt{font-size: 14px;color:#999;margin-bottom: 25px;}
+.dfth-aboutus .expert-txt dd{font-size: 14px;color:#666;line-height: 24px;}
+
+
+
 
