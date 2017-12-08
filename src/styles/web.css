@@ -722,7 +722,7 @@ position: relative;}
 .dfth-aboutus .info-list .p3 i{font-size: 56px;line-height: 56px;}
 .dfth-aboutus .info-list .p2 {font-size: 20px;}
 .dfth-aboutus .middle {border-left:1px solid #e6e6e6;border-right:1px solid #e6e6e6;}
-.dfth-aboutus .map-pic {width: 1036px;margin:100px auto 0;}
+.dfth-aboutus .map-pic {width: 1036px;margin:0 auto;}
 .dfth-aboutus .teach-group {width: 1100px;margin:70px auto 0;}
 .dfth-aboutus .list-con {padding: 40px;}
 .dfth-aboutus .list-title {padding: 40px 50px 60px 0;border-right: 1px solid #e6e6e6;}
@@ -746,6 +746,23 @@ position: relative;}
 .dfth-aboutus .expert-txt .name {color:#ff8c1b;font-size: 28px;margin-bottom: 15px;}
 .dfth-aboutus .expert-txt dt{font-size: 14px;color:#999;margin-bottom: 25px;}
 .dfth-aboutus .expert-txt dd{font-size: 14px;color:#666;line-height: 24px;}
+
+.dfth-aboutus .map-box {position: relative;width: 1036px;margin:100px auto 0;}
+.dfth-aboutus .map-box li{position: absolute;cursor: pointer;width: 100px;}
+.dfth-aboutus .map-box li .location-icon {width: 18px;height: 18px;margin-top: -3px;}
+.dfth-aboutus .map-box li .location-txt {font-size: 18px;margin-left: 3px;}
+.dfth-aboutus .map-box .m1 {top: 225px;left: 230px;}
+.dfth-aboutus .map-box .m2 {top: 310px;left: 410px;}
+.dfth-aboutus .map-box .m3 {top: 560px;left: 460px;}
+.dfth-aboutus .map-box .m4 {top: 300px;left: 570px;}
+.dfth-aboutus .map-box .m5 {top: 400px;left: 550px;}
+.dfth-aboutus .map-box .m6 {top: 480px;left: 590px;}
+.dfth-aboutus .map-box .m7 {top: 730px;left: 570px;}
+.dfth-aboutus .map-box .m8 {top: 632px;left: 550px;}
+.dfth-aboutus .map-box .m9 {top: 520px;left: 640px;}
+.dfth-aboutus .map-box .m10 {top: 645px;left: 680px;}
+.dfth-aboutus .map-box .m11 {top: 420px;left: 695px;}
+
 
 
 
