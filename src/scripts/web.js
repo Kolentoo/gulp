@@ -110,6 +110,7 @@ $(function(){
     certificate();
     toggleTab();
     aboutTab();
+    pbl();
 });
 //校区环境轮播图
 function enviroment(){
@@ -793,7 +794,6 @@ function certificate(){
     })
 }
 
-
 // 加入我们
 function toggleTab(){
     $('.job-title').on('click',function(){
@@ -810,6 +810,42 @@ function toggleTab(){
         $('.pop-job').addClass('hide');
         $('.result').addClass('hide');
         maskoff();
+    });
+}
+
+// 我的作品
+function pbl(){
+    if ($('#container').get(0)) {
+        $("img.lazy").lazyload({
+            load: function () {
+                $('#container').BlocksIt({
+                    numOfCol: 4,
+                    offsetX: 15,
+                    offsetY: 15
+                });
+            }
+        });
+    }
+    $(window).scroll(function () {
+        // 当滚动到最底部以上50像素时， 加载新内容
+        if ($(document).height() - $(this).scrollTop() - $(this).height() < 50) {
+            $('#container').append($("#test").html());
+            if ($('#container').get(0)) {
+                $('#container').BlocksIt({
+                    numOfCol:4,
+                    offsetX: 15,
+                    offsetY: 15
+                });
+                $("img.lazy").lazyload();
+            }
+        }
+    });
+
+    $('.search-txt').find('.p1').on('click',function(){
+        var o = $(this);
+        var os = o.siblings();
+        os.removeClass('on');
+        o.addClass('on');
     });
 }
 
