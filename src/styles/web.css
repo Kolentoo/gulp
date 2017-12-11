@@ -773,7 +773,8 @@ position: relative;}
 .dfth-aboutus .map-box .m20 {top: 140px;left: 920px;}
 
 
-/* 我的画廊 */
+/* 在线画廊 */
+.myself-body,.myself-html {background: #f9f9f7;}
 .dfth-myself .search-box {background: #fff;height: 70px;line-height: 70px;border-bottom: 1px solid #e6e6e6;}
 .dfth-myself .search-box .search-con {width: 1160px;margin:0 auto;}
 .dfth-myself .search-txt .p1 {color:#999;cursor: pointer;font-size: 16px;width: 70px;line-height: 20px;margin-top: 25px;}
@@ -783,9 +784,9 @@ position: relative;}
 .dfth-myself .search-box .search {width: 215px;height: 40px;line-height: 40px;padding-left: 15px;border-radius:5px 0 0 5px;border:1px solid #e6e6e6;}
 .dfth-myself .search-box .search-btn {width: 54px;height: 40px;border:1px solid #e6e6e6;border-radius:0 5px 5px 0;text-align: center;
 font-size: 16px;color:#fff;background: #ff8c1b;line-height: 40px;cursor: pointer;}
-.dfth-myself .search-result {background: #f9f9fa;padding:40px 0;width:100%;}
+.dfth-myself .search-result {background: #f9f9fa;padding:20px 0 40px 0;width:100%;margin-top: 20px;}
 .dfth-myself .result-con {width: 1160px;margin:0 auto;position: relative;}
-.dfth-myself .result-item {width: 258px;border:1px solid #e6e6e6;background: #fff;border-radius:5px;padding-bottom: 10px;}
+.dfth-myself .result-item {width: 258px;border:1px solid #e6e6e6;background: #fff;border-radius:5px;padding-bottom: 10px;cursor: pointer;}
 .dfth-myself .result-item .name {padding:25px 12px;font-size: 16px;color:#333;border-bottom: 1px solid #e6e6e6;}
 .dfth-myself .result-item .view-box {padding:15px 0;}
 .dfth-myself .result-item .person-pic {width: 28px;height: 28px;border-radius:50%;}
@@ -798,6 +799,91 @@ font-size: 16px;color:#fff;background: #ff8c1b;line-height: 40px;cursor: pointer
 .dfth-myself .result-item .detail .p1 {font-size: 14px;color:#333;}
 .dfth-myself .result-item .detail .p2 {color:#999;}
 .dfth-myself .result-item .detail .p3 {color:#999;}
+
+/* 他的画廊 */
+.gallery-body,.gallery-html {background: #f9f9f7;}
+.dfth-gallery .search-box {height: 110px;box-shadow:0 4px 4px rgba(0,0,0,0.06);-moz-box-shadow:0 4px 4px rgba(0,0,0,0.06);
+-webkit-box-shadow:0 4px 4px rgba(0,0,0,0.06);border-bottom: none;} 
+.dfth-gallery .search-box .search-con {position: relative;}
+.dfth-aboutus .search-box .author-wrap {width: 1160px;}
+.dfth-gallery .search-box .share-box {width:250px;position: absolute;right: 40px;bottom: -90px;background: #fff;border-radius:8px;
+box-shadow:0 3px 5px rgba(0,0,0,0.04);border:1px solid #e6e6e6;padding:0 10px;opacity: 0;transition:all ease 0.5s;}
+.dfth-gallery .search-box .share-on {opacity: 1;bottom: -70px;}
+.dfth-gallery .search-box .arrow {font-size: 16px;color: #e6e6e6;position: absolute;top: -38px;right: 30px;opacity: 0;}
+.dfth-gallery .author-box {padding-top: 18px;width: 400px;}
+.dfth-gallery .author-box .author-tx {width: 72px;height: 72px;border-radius:50%;}
+.dfth-gallery .author-box .author-info {margin:10px 0 0 20px;}
+.dfth-gallery .author-box .author-info .p1 {font-size: 20px;color:#333;line-height: 20px;}
+.dfth-gallery .author-box .author-info .p2 {font-size: 16px;color:#666;line-height: 16px;margin-top: 15px;}
+.dfth-gallery .author-work {width: 355px;}
+.dfth-gallery .author-work .work-info {width: 90px;text-align: center;border-right:1px solid #e6e6e6;margin-top: 35px;}
+.dfth-gallery .author-work .work-info .p3 {color:#333;font-size: 16px;line-height: 16px;}
+.dfth-gallery .author-work .work-info .p4 {color:#999;font-size: 16px;line-height: 16px;padding-top: 10px;}
+.dfth-gallery .author-work .share-btn {width: 100px;height: 40px;border-radius:5px;background: #ff8c1b;text-align: center;font-size: 16px;
+line-height: 40px;color:#fff;cursor: pointer;margin:35px 40px 0 0;}
+.dfth-gallery .author-work .share-btn .share-icon {width: 15px;margin-right: 5px;position: relative;top: -2px;}
+
+.work-mask {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index:300;background: #fff;opacity: 0.9;filter:alpha(opacity=90);}
+.work-pop .work-con {width: 1160px;margin:40px auto 0;}
+.work-pop .pic-box {z-index:350;position: absolute;top: 40px;left: 50%;margin-left: -590px;width: 820px;background: #fff;padding:40px 0;border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);-moz-box-shadow:0 0 10px rgba(0,0,0,0.1);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.1);}
+.work-pop .pic-box .main-pic {width: 740px;margin:0 auto;border-radius:8px;}
+.work-pop .pic-box .main-detail {margin-top: 25px;}
+.work-pop .pic-box .main-detail .name {font-size: 20px;color:#333;}
+.work-pop .pic-box .main-detail .pic-info {margin-top: 10px;padding-bottom: 40px;border-bottom: 1px solid #e6e6e6;}
+.work-pop .pic-box .main-detail .pic-info .p1 {font-size: 14px;color:#999;width: 250px;}
+.work-pop .pic-box .main-detail .pic-info .pic-data {width: 200px;}
+.work-pop .pic-box .main-detail .pic-info .data {margin-left: 20px;}
+.work-pop .pic-box .main-detail .pic-info .data img{margin-right: 5px;position: relative;top: -2px;}
+.work-pop .pic-box .main-detail .pic-info .data {color:#999;font-size: 14px;}
+.work-pop .pic-box .main-detail .des {font-size: 14px;color:#666;margin-top: 20px;}
+.work-pop .social-btn {width: 100px;height: 40px;line-height: 40px;background: #ff8c1b;border-radius:8px;text-align: center;margin:40px auto 0;}
+.work-pop .social-btn .share-icon {width: 15px;height: 16px;position: relative;top: -2px;}
+.work-pop .social-btn i{font-size: 16px;color:#fff;}
+.work-pop .total-pic {z-index:300;position: absolute;top: 40px;right: 50%;margin-right: -570px;width: 300px;background: #fff;border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);-moz-box-shadow:0 0 10px rgba(0,0,0,0.1);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.1);}
+.work-pop .total-pic .total-title {padding-bottom: 20px;border-bottom: 1px solid #e6e6e6;}
+.work-pop .total-pic .total-title .title-con {margin:20px 0 0 20px;}
+.work-pop .total-pic .total-title .author-pic {width: 57px;height: 57px;border-radius:50%;margin-right: 15px;}
+.work-pop .total-pic .total-title .p1 {font-size: 20px;color:#333;margin-top: 5px;}
+.work-pop .total-pic .total-title .p2 {font-size: 14px;color:#666;}
+.work-pop .total-body .pic-item {width: 240px;border-radius:8px;margin:30px auto 0;display: block;}
+.work-pop .total-box {border-top: 1px solid #e6e6e6;}
+.work-pop .total-num {font-size: 20px;line-height: 100px;background: #f9f9fa;border-top: 1px solid #e6e6e6;margin-top: 7px;display: inline-block;
+width: 100%;}
+.work-pop .pop-close {position: fixed;top: 30px;right: 30px;width: 42px;height: 42px;cursor: pointer;z-index:400;}
+
+/* 校区查询 */
+.school-body,.school-html {background: #f9f9f7;}
+.dfth-school .content {width: 1200px;margin:30px auto 40px;}
+.dfth-school h1{font-size: 28px;color:#333;margin-bottom: 30px;}
+.dfth-school .school-head {height: 70px;line-height: 70px;background: #fff;border-radius:8px;border:1px solid #e6e6e6;}
+.dfth-school .school-city {width: 320px;}
+.dfth-school .school-city .location-icon {width: 26px;margin:20px 0 0 20px;}
+.dfth-school .school-city .p1 {font-size: 20px;color:#ff8c1b;margin-left: 10px;}
+.dfth-school .school-choose {width: 600px;margin-top: 2px;}
+.dfth-school .school-choose .p2 {font-size: 16px;color:#333;}
+.dfth-school select{width: 220px;padding-left: 10px;height: 48px;line-height: 48px;border-radius:8px;border:1px solid #e6e6e6;margin-left: 20px;
+font-size: 16px;}
+.dfth-school .school-body {background: #fff;border-radius:8px;border:1px solid #e6e6e6;padding: 20px;}
+.dfth-school .school-info {width: 460px;}
+.dfth-school .info-list {padding-bottom: 10px;border-bottom: 1px solid #e6e6e6;cursor: pointer;margin-bottom: 16px;}
+.dfth-school .info-list .num {width: 23px;height: 23px;border-radius:50%;border:1px solid #ff8c1b;color:#ff8c1b;line-height: 24px;
+text-align: center;font-size: 14px;transition:all ease 0.5s;}
+.dfth-school .info-list .info-detail {width: 420px;font-size: 14px;color:#999;transition:all ease 0.5s;}
+.dfth-school .info-list .info-detail p{margin-bottom: 5px;}
+.dfth-school .info-list .info-detail .p1 {color:#333;}
+.dfth-school .info-list .info-detail span{margin-left: 10px;}
+.dfth-school .info-list:hover .info-detail .p1 {color:#ff8c1b;}
+.dfth-school .info-list:hover .info-detail{color:#ff8c1b;}
+.dfth-school .info-list:hover .num {background: #ff8c1b;color:#fff;}
+.dfth-school .info-on .info-detail .p1 {color:#ff8c1b;}
+.dfth-school .info-on .num {background: #ff8c1b;color:#fff;}
+.dfth-school .info-on .info-detail {color:#ff8c1b;}
+.dfth-school .page-opeation .page-arrow {margin-right: 5px;}
+.dfth-school .page-opeation .previous {margin-right: 15px;}
+.dfth-school .page-data {border:none;font-size: 18px;color:#999;width: 50px;background: none;}
+
 
 
 

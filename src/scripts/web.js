@@ -111,6 +111,8 @@ $(function(){
     toggleTab();
     aboutTab();
     pbl();
+    share();
+    school();
 });
 //校区环境轮播图
 function enviroment(){
@@ -847,5 +849,39 @@ function pbl(){
         os.removeClass('on');
         o.addClass('on');
     });
+
+    $('.result-item').on('click',function(){
+        var o = $(this);
+        var opic = o.find('.search-pic').attr('src');
+        var opicname = o.find('.name');
+        $('.work-pop').removeClass('hide');
+        setTimeout(function() {
+            $('.work-pop').find('.lazy').lazyload({effect: "fadeIn"});
+        }, 1);
+    });
+
+    $('.pop-close2').on('click',function(){
+        $('.work-pop').addClass('hide');
+    });
+}
+
+// 社会化分享
+function share(){
+    if($('.share-body').get(0)){
+        $('#share').share({sites: ['qzone', 'qq', 'weibo','wechat','douban']});
+    }
+    $('.share-btn').on('click',function(){
+        $('.share-box').toggleClass('share-on');
+    });
+}
+
+function school(){
+    if($('.dfth-school').get(0)){
+        $('.pagination').jqPagination({
+            paged: function(page) {
+                // do something with the page variable
+            }
+        });
+    }
 }
 
