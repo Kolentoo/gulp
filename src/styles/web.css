@@ -865,9 +865,9 @@ width: 100%;}
 .dfth-school .school-choose .p2 {font-size: 16px;color:#333;}
 .dfth-school select{width: 220px;padding-left: 10px;height: 48px;line-height: 48px;border-radius:8px;border:1px solid #e6e6e6;margin-left: 20px;
 font-size: 16px;}
-.dfth-school .school-body {background: #fff;border-radius:8px;border:1px solid #e6e6e6;padding: 20px;}
+.dfth-school .school-body {background: #fff;border-radius:8px;border:1px solid #e6e6e6;padding: 20px 20px 40px;}
 .dfth-school .school-info {width: 460px;}
-.dfth-school .info-list {padding-bottom: 10px;border-bottom: 1px solid #e6e6e6;cursor: pointer;margin-bottom: 16px;}
+.dfth-school .info-list {padding-bottom: 15px;border-bottom: 1px solid #e6e6e6;cursor: pointer;margin-bottom: 16px;}
 .dfth-school .info-list .num {width: 23px;height: 23px;border-radius:50%;border:1px solid #ff8c1b;color:#ff8c1b;line-height: 24px;
 text-align: center;font-size: 14px;transition:all ease 0.5s;}
 .dfth-school .info-list .info-detail {width: 420px;font-size: 14px;color:#999;transition:all ease 0.5s;}
@@ -882,7 +882,92 @@ text-align: center;font-size: 14px;transition:all ease 0.5s;}
 .dfth-school .info-on .info-detail {color:#ff8c1b;}
 .dfth-school .page-opeation .page-arrow {margin-right: 5px;}
 .dfth-school .page-opeation .previous {margin-right: 15px;}
-.dfth-school .page-data {border:none;font-size: 18px;color:#999;width: 50px;background: none;}
+.dfth-school .page-data {border:none;font-size: 18px;color:#999;width: 60px;background: none;}
+
+/*百度地图相关*/
+.school-html,.school-body { height: 100%;}
+.dfth-school .box { width: 628px; height: 520px;border:1px solid #ff9743;}
+.dfth-school #container3 { width: 100%; height: 100%; }
+.dfth-school .list { width: 20%; height: 100%; background: #eee; }
+.dfth-school .list li { height: 34px; line-height: 34px; padding-left: 20px; }
+.dfth-school .list li.active a { color: red; }
+.dfth-school .title { font-size: 14px; font-weight: bold; color: #cc5522; }
+.dfth-school .content { font-size: 13px; color: #333; margin-top: 6px; }
+
+/* 市场推广 */
+.dfth-market .banner {margin-top: 100px;}
+.dfth-market .tab-box .bd {width: 1200px;margin:40px auto 0;}
+.dfth-market .tab-box .main-des {width: 330px;}
+.dfth-market .tab-box .main-des h3{font-size: 24px;color:#333;margin-bottom: 15px;}
+.dfth-market .tab-box .main-des .h3-on {left: 0;opacity: 1;}
+.dfth-market .tab-box .main-des .p1 {font-size: 14px;line-height: 24px;}
+.dfth-market .tab-box .des-btn {width: 110px;height: 42px;text-align: center;line-height: 44px;color:#fff;font-size: 14px;
+background: #ff8c1b;color:#fff;border-radius:8px;margin-top: 45px;transition:all ease 0.5s;}
+.dfth-market .tab-box .main-lesson .des-btn {position: relative;left: -80px;opacity: 0;transition:all ease 0.5s;overflow: hidden;}
+.dfth-market .tab-box .main-lesson .des-btn-in {left: 0;opacity: 1;}
+.dfth-market .tab-box .des-btn span {width:60px;display: inline-block;}
+.dfth-market .tab-box .des-btn .s1 {transition:all ease 0.5s;position: relative;top: 0;left: -12px;}
+.dfth-market .tab-box .des-btn .s2 {transition:all ease 0.5s;position: relative;left: -80px;}
+.dfth-market .tab-box .des-btn:hover {background: #333;}
+.dfth-market .tab-box .des-btn:hover .s1 {top: 50px;}
+.dfth-market .tab-box .des-btn:hover .s2 {left: 0;top: -44px;}
+.dfth-market .tab-box .des-btn .arrow {width: 16px;position: relative;left: 0;top: -45px;}
+.dfth-market .main-pic {width: 758px;margin-right: 20px;}
+.dfth-market .main-des {margin: 45px 0 0 20px;}
+.dfth-market .lesson-list {width: 360px;margin:40px 20px 0;}
+.dfth-market .lesson-list .other-pic {width: 360px;}
+.dfth-market .lesson-list .other-pic img{max-height:200px;}
+.dfth-market .lesson-title {font-size: 24px;color:#333;padding:15px 0;}
+.dfth-market .lesson-des {font-size: 14px;color:#666;height: 44px;overflow: hidden;}
+.dfth-market .lesson-box .lesson-btn {margin:20px 0 0 0;}
+
+.dfth-market .aboutus-box {width: 1190px;margin:0 auto;position: relative;}
+.dfth-market .aboutus {margin-top: 50px;}
+.dfth-market .aboutus .about-pic {width: 698px;border-radius:8px;overflow: hidden;}
+.dfth-market .aboutus .about-pic img{width: 100%;}
+.dfth-market .aboutus .introduce {width: 580px;background: #fff;border-radius:50%;border:1px solid #e6e6e6;border-radius:8px;padding: 30px;
+position: absolute;right: 0;top: 50%;margin-top: -50px;box-shadow:0 0 30px rgba(0,0,0,0.08);-moz-box-shadow:0 0 30px rgba(0,0,0,0.08);
+-webkit-box-shadow:0 0 30px rgba(0,0,0,0.08);}
+.dfth-market .aboutus .introduce .intro-title {font-size: 24px;color:#333;background: url(../images/title.png) no-repeat;width: 223px;
+height: 63px;}
+.dfth-market .aboutus .introduce .p1 {font-size: 14px;margin:25px 0;}
+.dfth-market .aboutus .des-btn {width: 110px;height: 42px;text-align: center;line-height: 44px;color:#fff;font-size: 14px;
+background: #ff8c1b;color:#fff;border-radius:8px;margin-top: 45px;}
+.dfth-market .aboutus .des-btn span{margin-left: -15px;}
+.dfth-market .aboutus .des-btn .arrow {width: 16px;margin:15px 0 0 5px;display: inline-block;}
+.dfth-market .listen {cursor:pointer;margin:5px auto 0;width: 240px;height: 60px;line-height: 60px;border-radius:50px;font-size: 20px;color:#ff8c1b;
+background: #fff;box-shadow:0 0 10px rgba(209,104,0,0.5);-moz-box-shadow:0 0 10px rgba(209,104,0,0.5);
+-webkit-box-shadow:0 0 10px rgba(209,104,0,0.5);}
+
+.market-top {background: #fff;width: 1160px;margin:0 auto;height: 100px;line-height: 100px;z-index:999;width: 100%;position: absolute;
+top: 0;left: 0;}
+.market-nav {width: 100%;top: 0;left: 0;position: fixed;opacity: 0;transition:all ease 0.5s;filter:alpha(opacity=0);}
+.market-on {opacity: 1;filter:alpha(opacity=100);}
+.market-con {width: 1160px;margin:0 auto;}
+.market-top .logo {width: 154px;transition: all ease 0.5s;}
+.market-top .menu-con {margin-left: 20px;}
+.market-top .menu-list {width: 130px;text-align: center;transition:all ease 0.5s;font-size: 16px;color:#333;background: #fff;
+margin:0 13px;cursor: pointer;height: 100px;line-height: 100px;transition:all ease 0.5s;}
+.market-top .menu-list a{transition:all ease 0.5s;}
+.market-top .menu-list:hover {background: #ffa438;}
+.market-top .menu-list:hover a{color:#fff;}
+.market-top .menu-on {background: #ffa438;}
+.market-top .menu-on a{color:#fff;}
+
+.market-top .phone {width: 250px;transition:all ease 0.5s;margin-top: 0;}
+.market-top .phone-icon {width: 26px;margin-top: -13px;}
+.market-top .phone-num {font-size: 30px;color:#ff8c1b;margin-left: 5px;}
+.phone-nav {position: fixed;top: 35%;right: 40px;text-align: center;
+width: 176px;height: 96px;text-align: center;font-size: 16px;line-height: 18px;}
+.phone-nav .phone-con {position: relative;}
+.phone-nav .phone-con .p2 {height: 96px;line-height: 96px;background: #fff;width: 130px;text-align: center;font-size: 20px;position: absolute;
+right: 0;top: 0;padding:0 15px;border-radius:8px 0 0 8px;color:#ff8c1b;z-index:-1;border:1px solid #e6e6e6;
+transition:all ease 0.5s;opacity: 0;filter:alpha(opacity=0);}
+.phone-nav .phone-con .p-on {opacity: 1;filter:alpha(opacity=100);}
+.phone-nav:hover .phone-con .p2 {opacity: 1;filter:alpha(opacity=100);right: 44px;}
+.phone-nav .phone-con .p1 {width: 46px;;padding: 13px 0;color:#fff;cursor:pointer;background: #ff8c1b;border-radius:5px;position: relative;
+left: 130px;top: 0;
+box-shadow:0 4px 10px rgba(255,140,27,0.4);-moz-box-shadow:0 4px 10px rgba(255,140,27,0.4);-webkit-box-shadow:0 4px 10px rgba(255,140,27,0.4);}
 
 
 
