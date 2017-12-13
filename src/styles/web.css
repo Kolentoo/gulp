@@ -970,6 +970,34 @@ left: 130px;top: 0;
 box-shadow:0 4px 10px rgba(255,140,27,0.4);-moz-box-shadow:0 4px 10px rgba(255,140,27,0.4);-webkit-box-shadow:0 4px 10px rgba(255,140,27,0.4);}
 
 
+/* 学员中心介绍 */
+.dfth-student .banner {background: url(../images/student-bj.jpg) no-repeat center center;height: 540px;}
+.dfth-student .banner-con {width: 900px;margin:0 auto;}
+.dfth-student .banner-con .student-pic1 {width: 338px;height: 538px;margin-top: 32px;}
+.dfth-student .banner-con .banner-title {width: 340px;text-align: center;color:#fff;margin:100px 100px 0 0;}
+.dfth-student .banner-title .p1 {font-size: 40px;}
+.dfth-student .banner-title .p2 {font-size: 16px;margin-top: 5px;}
+.dfth-student .code-box {background: #fff;padding:15px;width: 200px;margin:20px auto 0;}
+.dfth-student .code-box .code-pic {width: 100%;}
+.dfth-student .code-box .p3 {font-size: 14px;color:#666;margin-top: 15px;}
+.dfth-student .cont1-box {background: #fff;position: relative;z-index:5;}
+.dfth-student .cont2-box {background: #f9f9fa;}
+.dfth-student .cont3-box {background: #fff;}
+.dfth-student .cont4-box {background: #f9f9fa;}
+.dfth-student .cont5-box {background: #fff;}
+.dfth-student .cont-box .cont-con {padding:90px 0;width: 900px;margin:0 auto;}
+.dfth-student .cont-box .student-pic2 {max-height:528px;}
+.dfth-student .cont-box .student-pic3 {max-height:502px;}
+.dfth-student .cont-box .student-pic4 {max-height:502px;}
+.dfth-student .cont-box .student-pic5 {max-height:502px;}
+.dfth-student .cont-box .student-pic6 {max-height:400px;}
+.dfth-student .cont-box .intro-txt {margin-top: 180px;}
+.dfth-student .cont-box .txt-group {width: 390px;}
+.dfth-student .cont-box h2{font-size: 32px;font-weight:bold;margin-bottom: 10px;}
+.dfth-student .cont-box .student-line {margin-bottom: 35px;}
+.dfth-student .cont-box .cricle {width: 11px;height: 11px;border-radius:50%;background: #ddd;display: inline-block;margin-right: 20px;}
+.dfth-student .cont-box .p1 {width: 340px;margin-top: -9px;}
+.dfth-student .cont-box dd{font-size: 20px;color:#666;margin-bottom: 12px;width: 390px;}
 
 
 
