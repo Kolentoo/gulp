@@ -106,6 +106,8 @@ gulp.task('server',function(){
 // 默认任务
 gulp.task('default',['server','auto']);
 
+
+//除了cnpm install 还需要cnpm install gulp -g
 gulp.task('compress',function(){  
     gulp.start('cssmin','htmlmin','jsmin','imgmin');
 });
