@@ -1,0 +1,62 @@
+/* font */
+@font-face {font-family: "johome";src: url('./font/Oswald-Regular.ttf');}
+.customfont { font-family: "johome", Helvetica, Arial;}
+img{transition: all 0.5s;-moz-transition: all 0.5s;	/* Firefox 4 */-webkit-transition: all 0.5s;	/* Safari 和 Chrome */-o-transition: all 0.5s;
+	/* Opera */;}
+
+
+/*size*/
+.changesize {width: 1460px;margin:0 auto;}
+
+/* commontop */
+.common-top {height: 70px;background: #099cd5;width: 100%;}
+.common-con {width: 1460px;margin:0 auto;min-width: 1200px;}
+.logo-box {width: 125px;margin-top: 14px;}
+.menubox {margin-left: 110px;transition:all ease 0.3s;}
+.menubox .menulist {font-size: 18px;color: #fff;line-height: 70px;height: 70px;}
+.menubox .menulist a{color:#fff;display: inline-block;padding:0 12px;transition:all ease 0.3s;}
+.menubox .menulist a:hover {background: #fff;color:#099cd5;box-shadow: 0px 2px 4px 0px 
+    rgba(210, 210, 210, 0.31);}
+.menubox .menulist:hover .icon-down-white {background: url('../images/index/icons.png') no-repeat -260px -95px;width:12px;height:10px;display: inline-block;}
+.login-box {margin-left: 40px;}
+.icon-login {background: url('../images/index/icons.png') no-repeat -190px -3px;width:16px;height:21px;display: inline-block;
+    position: relative;top: 3px;margin-right: 2px;}
+.login-box a{font-size: 16px;color:#fff;line-height: 70px;}
+.login-box .line {width: 1px;height: 18px;background: #fff;margin:0 6px;display: inline-block;position: relative;top: 3px;}
+.language .current-language {font-size: 16px;color:#fff;line-height: 70px;cursor: pointer;margin-right: 2px;}
+
+/* icon */
+.icon-down-white {background: url('../images/index/icons.png') no-repeat -165px -95px;width:12px;height:10px;display: inline-block;}
+.icon-location {background: url('../images/index/icons.png') no-repeat -50px -115px;width:14px;height:17px;display: inline-block;}
+.icon-search {background: url('../images/index/icons.png') no-repeat -142px -91px;width:17px;height:17px;display: inline-block;}
+.icon-phone {background: url('../images/index/icons.png') no-repeat -451px 0;width:14px;height:26px;display: inline-block;}
+.icon-zone {background: url('../images/index/icons.png') no-repeat -150px -216px;width:24px;height:28px;display: inline-block;}
+.icon-house {background: url('../images/index/icons.png') no-repeat -175px -216px;width:29px;height:27px;display: inline-block;}
+.icon-price {background: url('../images/index/icons.png') no-repeat -205px -216px;width:17px;height:28px;display: inline-block;}
+.icon-type {background: url('../images/index/icons.png') no-repeat -114px -216px;width:30px;height:31px;display: inline-block;}
+.icon-time {background: url('../images/index/icons.png') no-repeat -228px -216px;width:30px;height:30px;display: inline-block;}
+.icon-up {background: url('../images/index/icons.png') no-repeat -222px -97px;width:12px;height:8px;display: inline-block;}
+.icon-card {background: url('../images/index/icons.png') no-repeat 0 0;width:25px;height:24px;display: inline-block;}
+.icon-line {background: url('../images/index/icons.png') no-repeat -240px -89px;width:12px;height:31px;display: inline-block;}
+.icon-more1 {background: url('../images/index/icons.png') no-repeat -2px -91px;width:17px;height:17px;display: inline-block;}
+.icon-more2 {background: url('../images/index/icons.png') no-repeat -26px -91px;width:17px;height:17px;display: inline-block;}
+.icon-location2 {background: url('../images/index/icons.png') no-repeat -120px -89px;width:14px;height:19px;display: inline-block;}
+.icon-tag {background: url('../images/index/icons.png') no-repeat -293px -39px;width:77px;height:71px;}
+.icon-prev {background: url('../images/index/icons.png') no-repeat 0 -140px;width:50px;height:119px;display: inline-block;}
+.icon-next {background: url('../images/index/icons.png') no-repeat -55px -140px;width:50px;height:119px;display: inline-block;}
+.icon-newhouse {background: url('../images/index/icons.png') no-repeat -28px -3px;width:28px;height:26px;display: inline-block;}
+.icon-school {background: url('../images/index/icons.png') no-repeat -91px -2px;width:28px;height:22px;display: inline-block;}
+.icon-star {background: url('../images/index/icons.png') no-repeat -275px -90px;width:15px;height:20px;display: inline-block;}
+.icon-right2 {background: url('../images/index/icons.png') no-repeat -52px -91px;width:8px;height:13px;display: inline-block;}
+.icon-left {background: url('../images/index/icons.png') no-repeat -233px -140px;width:26px;height:26px;display: inline-block;}
+.icon-right {background: url('../images/index/icons.png') no-repeat -263px -140px;width:26px;height:26px;display: inline-block;}
+.icon-down {background: url('../images/index/icons.png') no-repeat -202px -96px;width:12px;height:8px;display: inline-block;}
+.icon-immigrant {background: url('../images/index/icons.png') no-repeat -251px -44px;width:27px;height:34px;display: inline-block;}
+.icon-know {background: url('../images/index/icons.png') no-repeat -201px -44px;width:28px;height:34px;display: inline-block;}
+.icon-act {background: url('../images/index/icons.png') no-repeat -52px -44px;width:27px;height:34px;display: inline-block;}
+.icon-buyhouse {background: url('../images/index/icons.png') no-repeat -150px -44px;width:27px;height:34px;display: inline-block;}
+.icon-baike {background: url('../images/index/icons.png') no-repeat -101px -44px;width:27px;height:34px;display: inline-block;}
+.icon-rightarrow {background: url('../images/index/arrow-right.png') no-repeat;width:5px;height:10px;display: inline-block;}
+.icon-eye {background: url('../images/index/eyes.png') no-repeat;width:19px;height:17px;display: inline-block;}
+.icon-new {background: url('../images/index/icons.png') no-repeat 0 -40px;width:41px;height:36px;display: inline-block;}
+.icon-quot {background: url('../images/index/icons.png') no-repeat -61px -2px;width:26px;height:27px;display: inline-block;}
